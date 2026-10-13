@@ -1,0 +1,7 @@
+{
+    "name": "racks2tracks",
+    "author": "nmxd",
+    "entry": "dist/extension.js",
+    "version": "1.0.0",
+    "minimumApiVersion": "1.0.0"
+}

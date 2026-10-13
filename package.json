@@ -1,0 +1,35 @@
+{
+  "name": "racks2tracks",
+  "version": "1.0.0",
+  "description": "Ableton Live 12 extension to split Drum Racks into individual MIDI tracks per pad",
+  "author": "nmxd",
+  "license": "MIT",
+  "keywords": [
+    "ableton",
+    "live-12",
+    "extension",
+    "drum-rack",
+    "midi"
+  ],
+  "main": "dist/extension.js",
+  "engines": {
+    "node": ">=24.14.1"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit && tsx build.ts --production",
+    "build:dev": "tsc --noEmit && tsx build.ts",
+    "start": "npm run build:dev && extensions-cli run",
+    "package": "npm run build && extensions-cli package",
+    "test": "tsx --test test/**/*.test.ts"
+  },
+  "dependencies": {
+    "@ableton-extensions/sdk": "file:./vendor/ableton-extensions-sdk-1.0.0-beta.0.tgz"
+  },
+  "devDependencies": {
+    "@ableton-extensions/cli": "file:./vendor/ableton-extensions-cli-1.0.0-beta.0.tgz",
+    "@types/node": "^24.1.0",
+    "esbuild": "0.28.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.3"  }
+}
